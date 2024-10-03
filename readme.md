@@ -97,7 +97,7 @@ The Citizen Coupon includes:
 
 ### POS Coupon ###
 
-The PosCoupon includes all details of the POS Coupon that will be printed and given to the customer. [```GetPosCoupon``](fiskalizimi/model_builder.go) returns an instance of the POS Coupon 
+The PosCoupon includes all details of the POS Coupon that will be printed and given to the customer. [```GetPosCoupon```](fiskalizimi/model_builder.go) returns an instance of the POS Coupon 
 
 ```
 func GetPosCoupon() *proto.PosCoupon {
@@ -402,7 +402,7 @@ func SendQrCode() error {
 
 ### Sending POS Coupons ###
 
-Similar to citizen coupons, you can send POS coupons with the SendPosCoupon function:
+Similar to citizen coupons, you can send POS coupons with the [SendPosCoupon](fiskalizimi/main.go) function:
 
 ```
 func SendPosCoupon() error {
