@@ -8,7 +8,6 @@ import (
 func GetCitizenCoupon() *proto.CitizenCoupon {
 	return &proto.CitizenCoupon{
 		BusinessId: 1,
-		FiscalId:   1,
 		PosId:      1,
 		CouponId:   1234,
 		Type:       proto.CouponType_Sale,
@@ -26,7 +25,6 @@ func GetCitizenCoupon() *proto.CitizenCoupon {
 func GetPosCoupon() *proto.PosCoupon {
 	return &proto.PosCoupon{
 		BusinessId: 1,
-		FiscalId:   1,
 		PosId:      1,
 		CouponId:   1234,
 		Location:   "Prishtine",
