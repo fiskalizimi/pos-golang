@@ -1,7 +1,7 @@
 package fiskalizimi
 
 import (
-	"fiskalizimi/public/pos-golang/fiskalizimi/proto"
+	"fiskalizimi/fiskalizimi/proto"
 	"time"
 )
 

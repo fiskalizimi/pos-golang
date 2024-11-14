@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"fiskalizimi/public/pos-golang/fiskalizimi/proto"
+	"fiskalizimi/fiskalizimi/proto"
 	"fmt"
 	"net/http"
 )
