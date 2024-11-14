@@ -170,7 +170,7 @@ To onboard your business, you need the following information:
 4. Branch ID
 
 Once you have downloaded the onboarder tool, and extracted/unzipped it to a folder, then you need to run the application. 
-After the application is executed, enter the details and click on the *Onboard* button
+After the application is executed, enter the details and click on the **Onboard** button
 
 ![Onboarder1](onboarder1.png) 
 
@@ -179,11 +179,11 @@ if everything went Ok, then you will get a success message:
 ![Onboarder2](onboard2.png)
 
 
-To view certificate and private key in PEM format, on the *Certificate* tab, first tick the *Show private key* checkbox, then click on the *Show Certificate* button:
+To view certificate and private key in PEM format, on the **Certificate** tab, first tick the **Show private key** checkbox, then click on the **Show Certificate** button:
 
 ![Onboarder3](onboard3.png)
 
-To extract certificate and private key in PEM format, on the *Certificate* tab, first tick the *Show private key* checkbox, then click on the *Export Certificate* button. 
+To extract certificate and private key in PEM format, on the **Certificate** tab, first tick the **Show private key** checkbox, then click on the **Export Certificate** button. 
 This action will create another two files in the folder ```private-key.pem``` and ```signed-certificate.pem```
 
 **WARNING !** Make sure to keep private key safe.
