@@ -159,7 +159,7 @@ We have provided a tool that simplifies the process a lot by creating the key pa
 To download the tool on you machine, click on one of the links below (depending on the operating system you are using):
 
 * [onboarder for windows](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-windows.zip)
-* [onboarder for MacOS M1/M2](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-macos.zip)
+* [onboarder for MacOS (https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-macos.zip)
 * [onboarder for Linux](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-linux.zip)
 
 To onboard your business, you need the following information:
