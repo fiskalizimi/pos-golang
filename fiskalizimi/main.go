@@ -77,7 +77,7 @@ func SignPosCoupon(cpn *proto.PosCoupon) (string, Signature, error) {
 // SendQrCode gets CitizenCoupon, digitally signs it using provided private key and then
 // sends the qr code to Fiscalization System
 func SendQrCode() error {
-	const url = "http://a94422f45ed154fe59456dd9678d460f-556849162.us-east-1.elb.amazonaws.com/citizen/coupon"
+	const url = "https://fiskalizimi.atk-ks.org/citizen/coupon"
 
 	// get Citizen Coupon
 	cpn := GetCitizenCoupon()
@@ -117,7 +117,7 @@ func SendQrCode() error {
 // SendPosCoupon gets PosCoupon, digitally signs it using provided private key and then
 // // sends the coupon details (base64 encoded) and signature to Fiscalization System
 func SendPosCoupon() error {
-	const url = "http://a94422f45ed154fe59456dd9678d460f-556849162.us-east-1.elb.amazonaws.com/pos/coupon"
+	const url = "https://fiskalizimi.atk-ks.org/pos/coupon"
 
 	// get POS Coupon
 	cpn := GetPosCoupon()

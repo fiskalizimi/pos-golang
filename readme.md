@@ -152,27 +152,24 @@ The POS Coupon includes:
 
 There are different ways to generate a PKI key pair, depending on the operating system.
 
-**WARNING!** Each POS system (PC/till) needs to have its own PKI key pair. The private key should never leave the machine that it is generated on !!!
+**WARNING!** Each POS system (PC/till) needs to have a unique ID and its own PKI key pair. The private key should never leave the machine that it is generated on !!!
 
 We have provided a tool that simplifies the process a lot by creating the key pair, generating a CSR and sending the CSR to ATK Certificate Authority to be digitally signed and verified.
 
 To download the tool on you machine, click on one of the links below (depending on the operating system you are using):
 
-* [atkcli for windows](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/atkcli/atk-cli-windows.zip)
-* [atkcli for MacOS Intel](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/atkcli/atk-cli-macos-intel.zip)
-* [atkcli for MacOS M1/M2](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/atkcli/atk-cli-macos-apple-silicon.zip)
-* [atkcli for Linux](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/atkcli/atk-linux.zip)
-
-Once you have downloaded the atkcli tool, and extracted/unzipped it to a folder, then you need to use the following command by changing the values in curly braces and providing valid data:
+* [atkcli for windows](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/onboarder/onboarder-windows.zip)
+* [onboarder for MacOS M1/M2](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/onboarder/onboarder-macos.zip)
+* [onboarder for Linux](https://github.com/fiskalizimi/pos-csharp/raw/refs/heads/main/onboarder/onboarder-linux.zip)
 
 Once you have downloaded the atkcli tool, and extracted/unzipped it to a folder, then you need to use the following command by changing the values in curly braces and providing valid data:
 ```
-./atkcli onboard -b "{businesID}" -p "{PosID} -n "{Business name}" -u "http://a94422f45ed154fe59456dd9678d460f-556849162.us-east-1.elb.amazonaws.com/ca/signcsr"
+./atkcli onboard -b "{businesID}" -p "{PosID} -n "{Business name}" -u "https://fiskalizimi.atk-ks.org/ca/signcsr"
 ```
 
 For example, if your BusinessID (NUI) is 888234, and the business name is "Joe Bloggs Caffee", then the command for POS with id 1 would look like:
 ```
- ./atkcli onboard -b "1234" -p "1"  -n "Joe Bloggs Caffee" -u "http://a94422f45ed154fe59456dd9678d460f-556849162.us-east-1.elb.amazonaws.com/ca/signcsr"
+ ./atkcli onboard -b "1234" -p "1"  -n "Joe Bloggs Caffee" -u "https://fiskalizimi.atk-ks.org/ca/signcsr"
 ```
 
 if everything went Ok, you should get back a 200 response and a valid certificate, something like:
