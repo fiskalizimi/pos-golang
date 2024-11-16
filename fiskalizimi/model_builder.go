@@ -1,7 +1,7 @@
 package fiskalizimi
 
 import (
-	"fiskalizimi/fiskalizimi/proto"
+	"fiskalizimi/proto"
 	"time"
 )
 

@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"fiskalizimi/fiskalizimi/proto"
+	"fiskalizimi/proto"
 	"fmt"
 	"net/http"
 )
