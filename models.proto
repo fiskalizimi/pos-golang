@@ -24,9 +24,10 @@ message CouponItem {
   string Name = 1;
   int64 Price = 2;
   float Quantity = 3;
-  int64 Total = 4;
-  string TaxRate = 5;
-  string Type = 6;
+  string Unit = 4;
+  int64 Total = 5;
+  string TaxRate = 6;
+  string Type = 7;
 }
 
 message Payment {
