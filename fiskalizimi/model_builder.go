@@ -24,18 +24,20 @@ func GetCitizenCoupon() *proto.CitizenCoupon {
 
 func GetPosCoupon() *proto.PosCoupon {
 	return &proto.PosCoupon{
-		BusinessId: 1,
-		PosId:      1,
-		CouponId:   1234,
-		Location:   "Prishtine",
-		OperatorId: "Kushtrimi",
-		Type:       proto.CouponType_Sale,
-		Time:       time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
+		BusinessId:     1,
+		CouponId:       1234,
+		BranchId:       3,
+		Location:       "Prishtine",
+		OperatorId:     "Kushtrimi",
+		PosId:          1,
+		VerificationNo: "1234567890123456",
+		Type:           proto.CouponType_Sale,
+		Time:           time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
 		Items: []*proto.CouponItem{
-			{Name: "uje rugove", Price: 150, Quantity: 3, Total: 450, TaxRate: "C", Type: "TT"},
-			{Name: "sendviq", Price: 300, Quantity: 2, Total: 600, TaxRate: "E", Type: "TT"},
-			{Name: "buke", Price: 80, Quantity: 4, Total: 320, TaxRate: "D", Type: "TT"},
-			{Name: "machiato e madhe", Price: 150, Quantity: 3, Total: 450, TaxRate: "E", Type: "TT"},
+			{Name: "uje rugove", Price: 150, Unit: "cope", Quantity: 3, Total: 450, TaxRate: "C", Type: "TT"},
+			{Name: "sendviq", Price: 300, Unit: "cope", Quantity: 2, Total: 600, TaxRate: "E", Type: "TT"},
+			{Name: "buke", Price: 80, Unit: "cope", Quantity: 4, Total: 320, TaxRate: "D", Type: "TT"},
+			{Name: "machiato e madhe", Unit: "cope", Price: 150, Quantity: 3, Total: 450, TaxRate: "E", Type: "TT"},
 		},
 		Payments: []*proto.Payment{
 			{Type: proto.PaymentType_Cash, Amount: 500},
