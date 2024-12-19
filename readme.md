@@ -140,7 +140,7 @@ The POS Coupon includes:
 * **BranchId** is the branch id. 
 * **Location** is the location/city of the Sale Point
 * **OperatorId** is the ID/Name of the operator/server
-* **VerificationNo** is a unique value for each coupon. Verification Number is used to check if the Coupon has been verified by the citizen.  
+* **VerificationNo** is a unique value for each coupon and it is 16 characters long max. Verification Number is used to check if the Coupon has been verified by the citizen.
 * **Type** this is the type of the coupon. It is an enum value and can be ```SALE```, ```RETURN``` or ```CANCEL```
 * **Time** the time fiscal coupon is issued. The value is Unix timestamp
 * **Items** is an array of ```CouponItem``` objects. Each ```CouponItem``` represents an item sold to the customer.
@@ -163,7 +163,7 @@ We have provided a tool that simplifies the process a lot by creating the key pa
 To download the tool on you machine, click on one of the links below (depending on the operating system you are using):
 
 * [onboarder for windows](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-windows.zip)
-* [onboarder for MacOS (https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-macos.zip)
+* [onboarder for MacOS](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-macos.zip)
 * [onboarder for Linux](https://github.com/fiskalizimi/pos-golang/raw/refs/heads/main/onboarder/onboarder-linux.zip)
 
 To onboard your business, you need the following information:
