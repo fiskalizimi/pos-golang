@@ -30,6 +30,7 @@ func GetPosCoupon() *proto.PosCoupon {
 		Location:       "Prishtine",
 		OperatorId:     "Kushtrimi",
 		PosId:          1,
+		ApplicationId:  1,
 		VerificationNo: "1234567890123456",
 		Type:           proto.CouponType_Sale,
 		Time:           time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
