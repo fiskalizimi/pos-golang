@@ -182,12 +182,12 @@ After the application is executed, enter the details and click on the **Onboard*
 
 if everything went Ok, then you will get a success message:
 
-![Onboarder2](onboard2.png)
+![Onboarder2](onboarder2.png)
 
 
 To view certificate and private key in PEM format, on the **Certificate** tab, first tick the **Show private key** checkbox, then click on the **Show Certificate** button:
 
-![Onboarder3](onboard3.png)
+![Onboarder3](onboarder3.png)
 
 To extract certificate and private key in PEM format, on the **Certificate** tab, first tick the **Show private key** checkbox, then click on the **Export Certificate** button. 
 This action will create another two files in the folder ```private-key.pem``` and ```signed-certificate.pem```
