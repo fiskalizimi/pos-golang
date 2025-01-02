@@ -7,9 +7,9 @@ import (
 
 func GetCitizenCoupon() *proto.CitizenCoupon {
 	return &proto.CitizenCoupon{
-		BusinessId: 1,
+		BusinessId: 60100,
 		PosId:      1,
-		CouponId:   1234,
+		CouponId:   10,
 		Type:       proto.CouponType_Sale,
 		Time:       time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
 		Total:      1820,
@@ -24,13 +24,13 @@ func GetCitizenCoupon() *proto.CitizenCoupon {
 
 func GetPosCoupon() *proto.PosCoupon {
 	return &proto.PosCoupon{
-		BusinessId:     1,
-		CouponId:       1234,
-		BranchId:       3,
+		BusinessId:     60100,
+		CouponId:       10,
+		BranchId:       1,
 		Location:       "Prishtine",
 		OperatorId:     "Kushtrimi",
 		PosId:          1,
-		ApplicationId:  1,
+		ApplicationId:  1234,
 		VerificationNo: "1234567890123456",
 		Type:           proto.CouponType_Sale,
 		Time:           time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
