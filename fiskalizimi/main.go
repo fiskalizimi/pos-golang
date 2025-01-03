@@ -7,15 +7,16 @@ import (
 	"errors"
 	"fiskalizimi/proto"
 	"fmt"
+	"io"
 	"net/http"
 )
 import protobuf "google.golang.org/protobuf/proto"
 
 const (
 	PrivateKeyPem = `-----BEGIN EC PRIVATE KEY-----
-MHcCAQEEINOaBfsjAy90F/GCYMhkT/PibHpI5aIVxYN0YJHC7WKfoAoGCCqGSM49
-AwEHoUQDQgAEjmvAipa/zaDRphq0biefLzvse7SRN3fY4SY1edOqFlzAsYv7yZ6D
-nDD65d4cs918/ZMzpfA7sm/gYOFU77qHXA==
+MHcCAQEEINiuodwPKwrI8CeAJaf7IITux/c/6h1EhWTs7p1LzRfcoAoGCCqGSM49
+AwEHoUQDQgAE9tA2vnPqhZu3ZtwERTWUvM4UTR4c3S0S5AOlKtVp5euUiklHB+S8
+jIknSTa+If/STSuM3sA8RJEYB5iqkvQUSQ==
 -----END EC PRIVATE KEY-----`
 )
 
@@ -107,6 +108,16 @@ func SendQrCode() error {
 		return err
 	}
 
+	defer resp.Body.Close() // Ensure the response body is closed
+
+	// Read the response body
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return errors.New(fmt.Sprintf("Error reading response body: %s", err.Error()))
+	}
+
+	fmt.Println("Response Body: ", string(body))
+
 	// check if status code is 200 (OK)
 	if resp.StatusCode != http.StatusOK {
 		return errors.New(fmt.Sprintf("response status code %d", resp.StatusCode))
@@ -131,7 +142,7 @@ func SendPosCoupon() error {
 	// build request body
 	requestBody := struct {
 		Details   string    `json:"details"`
-		Signature Signature `json:"qr_code"`
+		Signature Signature `json:"signature"`
 	}{
 		Details:   cpnBase64,
 		Signature: signature,
@@ -146,6 +157,16 @@ func SendPosCoupon() error {
 		return err
 	}
 
+	defer resp.Body.Close() // Ensure the response body is closed
+
+	// Read the response body
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return errors.New(fmt.Sprintf("Error reading response body: %s", err.Error()))
+	}
+
+	fmt.Println("Response Body: ", string(body))
+
 	// check if status code is 200 (OK)
 	if resp.StatusCode != http.StatusOK {
 		return errors.New(fmt.Sprintf("response status code %d", resp.StatusCode))
@@ -154,14 +175,21 @@ func SendPosCoupon() error {
 }
 
 func main() {
+	fmt.Println("Sending POS Coupon ...")
 	err := SendPosCoupon()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println("POS Coupon sent successfully")
 
+	fmt.Println("-------------------------------------------------")
+
+	fmt.Println("Sending QR Code ...")
 	err = SendQrCode()
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
+	fmt.Println("QR Code sent successfully")
 }

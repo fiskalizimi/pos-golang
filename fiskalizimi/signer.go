@@ -41,7 +41,7 @@ func SignBytes(data []byte, privateKeyPEM []byte) (Signature, error) {
 		return EmptySignature, err
 	}
 
-	// calculate the hasg value of the data
+	// calculate the hash value of the data
 	hashed := sha256.Sum256(data)
 
 	// digitally sign the hash value
