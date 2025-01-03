@@ -76,7 +76,7 @@ protoc --go_out=. --go-grpc_out=. your_file.proto.
 Finally, integrate the generated code into your Go project, import the appropriate packages, 
 and use the defined structs and services in your application.
 
-We have generated the GO code located at [```models.pb.go```](fiskalizimi/proto/models.pb.go)
+We have generated the GO code located at [```proto/models.pb.go```](fiskalizimi/proto/models.pb.go)
 
 ## Model Explanation ##
 
