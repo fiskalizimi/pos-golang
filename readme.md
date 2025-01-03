@@ -55,6 +55,29 @@ Before integrating the system, ensure you have the following installed:
 
 ## Generating PROTOBUF models ##
 
+To install and start using Protocol Buffers (protobuf) in a Go project, 
+begin by installing the Protocol Buffer Compiler (protoc). You can download it 
+from the [official release page](https://github.com/protocolbuffers/protobuf/releases), 
+ensuring it is added to your system's PATH. Next, install the Go plugin for protoc by running:
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+``` 
+and 
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go-grpc@latest.
+``` 
+These plugins generate Go code for protobuf definitions and gRPC services. 
+Add the ```$GOPATH/bin``` directory to your PATH to make ```protoc-gen-go``` and ```protoc-gen-go-grpc``` accessible. 
+To use protobuf, create a .proto file defining your messages and services, and then generate 
+the Go files using the command: 
+```
+protoc --go_out=. --go-grpc_out=. your_file.proto.
+``` 
+Finally, integrate the generated code into your Go project, import the appropriate packages, 
+and use the defined structs and services in your application.
+
+We have generated the GO code located at [```models.pb.go```](fiskalizimi/proto/models.pb.go)
+
 ## Model Explanation ##
 
 ### Citizen Coupon ###
