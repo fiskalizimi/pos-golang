@@ -50,8 +50,8 @@ Before integrating the system, ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo/fiskalizimi-integration-golang.git
-   cd fiskalizimi-integration-golang
+   git clone https://github.com/fiskalizimi/pos-golang.git
+   cd pos-golang
 
 ## Generating PROTOBUF models ##
 
