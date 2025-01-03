@@ -1,4 +1,4 @@
-package fiskalizimi
+package main
 
 import (
 	"bytes"
@@ -151,4 +151,17 @@ func SendPosCoupon() error {
 		return errors.New(fmt.Sprintf("response status code %d", resp.StatusCode))
 	}
 	return nil
+}
+
+func main() {
+	err := SendPosCoupon()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	err = SendQrCode()
+	if err != nil {
+		fmt.Println(err)
+	}
 }

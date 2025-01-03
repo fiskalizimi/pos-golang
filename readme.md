@@ -444,6 +444,10 @@ func SendPosCoupon() error {
 
 ## Running the Application ##
 
+Before you can run the sample application provided, you first need to be [onboarded](key-generation). 
+Once you have been onboarded, then you need to copy the private key and replace the existing private key in 
+the [main.go file](fiskalizimi/main.go)
+
 To execute the program and send the coupons:
 ```
 go run main.go

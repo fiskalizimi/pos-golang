@@ -1,4 +1,4 @@
-package fiskalizimi
+package main
 
 import (
 	"crypto/ecdsa"
