@@ -6,10 +6,11 @@ import (
 )
 
 func GetCitizenCoupon() *proto.CitizenCoupon {
-	return &proto.CitizenCoupon{
+	return &proto.CitizenCoupon{		
 		BusinessId: 60100,
 		PosId:      1,
 		CouponId:   10,
+		BranchId: 1,
 		Type:       proto.CouponType_Sale,
 		Time:       time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
 		Total:      1820,
