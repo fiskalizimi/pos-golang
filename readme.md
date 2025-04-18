@@ -508,6 +508,15 @@ func SendQrCode() error {
 }
 ```
 
+The json to be sent should look like:
+
+```
+{
+  "citizen_id": 7872345678,
+  "qr_code":"CIHI0p4CENIJGAEgATABOJy/w64GQJwOSgYKAUMQwgNKCAoBRBDAAhgaSgkKAUUQmggYvQFQ1wE=|MEUCIA0Cg2dC+JkPyxkpUDY9VPE6+WCJDOPFkpcyNHbQ0MxTAiEAhn4kdIebWarW2zvRz2k2dLZf29MxzG+4RFeY1g/C95k="
+}
+```
+
 ### Sending POS Coupons ###
 
 Similar to citizen coupons, you can send POS coupons with the [SendPosCoupon](fiskalizimi/main.go) function:
@@ -548,6 +557,15 @@ func SendPosCoupon() error {
 		return errors.New(fmt.Sprintf("response status code %d", resp.StatusCode))
 	}
 	return nil
+}
+```
+
+The json to be sent should look like:
+
+```
+{
+  "details":"CIHI0p4CENIJGAEiCVByaXNodGluZSoJS3VzaHRyaW1pMAE4wMQHQhAxMjM0NTY3ODkwMTIzNDU2SAFQnL/DrgZaJAoKdWplIHJ1Z292ZRCWARoEY29wZSUAAEBAKMIDMgFDOgJUVFohCgdzZW5kdmlxEKwCGgRjb3BlJQAAAEAo2AQyAUU6AlRUWh0KBGJ1a2UQUBoEY29wZSUAAIBAKMACMgFEOgJUVFoqChBtYWNoaWF0byBlIG1hZGhlEJYBGgRjb3BlJQAAQEAowgMyAUU6AlRUYgUIARD0A2IFCAIQ6AdiBQgDEMACaJwOcgYKAUMQwgNyCAoBRBDAAhgacgkKAUUQmggYvQF41wGAAcUM",
+  "signature":"MEQCIA5bgcs5gqxIAoKujhK7LXobNqa130DCjUTdBrCctYV1AiAzkvoSi+mvzFL4ThvzYPVsKegJ5sL00msyrlEiEJ6NmA=="
 }
 ```
 
