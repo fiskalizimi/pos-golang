@@ -20,6 +20,7 @@ func GetCitizenCoupon() *proto.CitizenCoupon {
 			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
 		},
 		TotalTax: 215,
+		TotalNoTax: 1605,
 	}
 }
 
