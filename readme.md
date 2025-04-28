@@ -263,7 +263,7 @@ This action will create another two files in the folder ```private-key.pem``` an
 
 To use the API, you need to create new **ECDSA private key** using the **P-256 elliptic curve** and a secure random number generator.
 
-The next step is to get ```VerificationCode``` from the Fiscalisation Service. To get the ```VerificationCode``` a ```POST``` request needs to be sent to the ```https://fiskalizimi.atk-ks.org/ca/verify/{nui}``` and JSON body of:
+The next step is to get ```VerificationCode``` from the Fiscalisation Service. To get the ```VerificationCode``` a ```POST``` request needs to be sent to the ```https://fiskalizimi.atk-ks.org/ca/verify/{nui}``` (for test the url is: ```https://fiskalizimi-test.atk-ks.org/ca/verify/{nui}```) and JSON body of:
 
 ```
 {
@@ -305,7 +305,7 @@ tAiM
 -----END CERTIFICATE REQUEST-----
 ```
 
-After the CSR is generated and signed with the private key, then a POST request is sent to the ```https://fiskalizimi.atk-ks.org/ca/signcsr``` endpoint with the following JSON:
+After the CSR is generated and signed with the private key, then a POST request is sent to the ```https://fiskalizimi.atk-ks.org/ca/signcsr``` (for test the url is: ```https://fiskalizimi-test.atk-ks.org/ca/signcsr```) endpoint with the following JSON:
 
 ```
 {
@@ -475,6 +475,7 @@ This is how you prepare and submit the request:
 ```
 func SendQrCode() error {
 	const url = "https://fiskalizimi.atk-ks.org/citizen/coupon"
+	// const test_url = "https://fiskalizimi-test.atk-ks.org/citizen/coupon"
 
 	// get Citizen Coupon
 	cpn := GetCitizenCoupon()
@@ -528,6 +529,7 @@ Similar to citizen coupons, you can send POS coupons with the [SendPosCoupon](fi
 ```
 func SendPosCoupon() error {
 	const url = "https://fiskalizimi.atk-ks.org/pos/coupon"
+	// const test_url = "https://fiskalizimi-test.atk-ks.org/pos/coupon"
 
 	// get POS Coupon
 	cpn := GetPosCoupon()
