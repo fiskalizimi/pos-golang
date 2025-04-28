@@ -208,7 +208,7 @@ To onboard your business, you need the following information:
 1. NUI of the business
 2. Fiscalization Number - (this is obtained from EDI)
 3. Pos ID - each POS should have a unique ID which is a numeric value
-4. Branch ID
+4. Branch ID - is the unique id of Branch where the POS system is located
 5. Application ID - obtained from the ATK upon certifying the POS Application
 
 ### Using Onboarding Tool ###
@@ -233,12 +233,12 @@ You need to provide an environment flag as an argument to the executable. For te
 
 For example
 
-On Windows Platform you need to open a command prompt then execute the application like the example below:
+On Windows Platform you need to open a command prompt then execute the application like the example below (for test change environment to TEST):
 ```shell
-onboarder.exe -env=TEST
+onboarder.exe -env=PROD
 ```
 
-On linux/macos you need to open a terminal and then exeucte the application like the example below: 
+On linux/macos you need to open a terminal and then exeucte the application like the example below (for test change environment to TEST): 
 ```shell
 ./onboarder -env=PROD
 ```
