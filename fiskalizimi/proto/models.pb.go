@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v3.21.12
-// source: models.proto
+// source: models_publish.proto
 
 package proto
 
@@ -57,11 +57,11 @@ func (x CouponType) String() string {
 }
 
 func (CouponType) Descriptor() protoreflect.EnumDescriptor {
-	return file_models_proto_enumTypes[0].Descriptor()
+	return file_models_publish_proto_enumTypes[0].Descriptor()
 }
 
 func (CouponType) Type() protoreflect.EnumType {
-	return &file_models_proto_enumTypes[0]
+	return &file_models_publish_proto_enumTypes[0]
 }
 
 func (x CouponType) Number() protoreflect.EnumNumber {
@@ -70,7 +70,7 @@ func (x CouponType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use CouponType.Descriptor instead.
 func (CouponType) EnumDescriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{0}
+	return file_models_publish_proto_rawDescGZIP(), []int{0}
 }
 
 type PaymentType int32
@@ -118,11 +118,11 @@ func (x PaymentType) String() string {
 }
 
 func (PaymentType) Descriptor() protoreflect.EnumDescriptor {
-	return file_models_proto_enumTypes[1].Descriptor()
+	return file_models_publish_proto_enumTypes[1].Descriptor()
 }
 
 func (PaymentType) Type() protoreflect.EnumType {
-	return &file_models_proto_enumTypes[1]
+	return &file_models_publish_proto_enumTypes[1]
 }
 
 func (x PaymentType) Number() protoreflect.EnumNumber {
@@ -131,7 +131,7 @@ func (x PaymentType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use PaymentType.Descriptor instead.
 func (PaymentType) EnumDescriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{1}
+	return file_models_publish_proto_rawDescGZIP(), []int{1}
 }
 
 type CouponItem struct {
@@ -149,7 +149,7 @@ type CouponItem struct {
 
 func (x *CouponItem) Reset() {
 	*x = CouponItem{}
-	mi := &file_models_proto_msgTypes[0]
+	mi := &file_models_publish_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -161,7 +161,7 @@ func (x *CouponItem) String() string {
 func (*CouponItem) ProtoMessage() {}
 
 func (x *CouponItem) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[0]
+	mi := &file_models_publish_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -174,7 +174,7 @@ func (x *CouponItem) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CouponItem.ProtoReflect.Descriptor instead.
 func (*CouponItem) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{0}
+	return file_models_publish_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CouponItem) GetName() string {
@@ -236,7 +236,7 @@ type Payment struct {
 
 func (x *Payment) Reset() {
 	*x = Payment{}
-	mi := &file_models_proto_msgTypes[1]
+	mi := &file_models_publish_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -248,7 +248,7 @@ func (x *Payment) String() string {
 func (*Payment) ProtoMessage() {}
 
 func (x *Payment) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[1]
+	mi := &file_models_publish_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -261,7 +261,7 @@ func (x *Payment) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Payment.ProtoReflect.Descriptor instead.
 func (*Payment) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{1}
+	return file_models_publish_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Payment) GetType() PaymentType {
@@ -289,7 +289,7 @@ type TaxGroup struct {
 
 func (x *TaxGroup) Reset() {
 	*x = TaxGroup{}
-	mi := &file_models_proto_msgTypes[2]
+	mi := &file_models_publish_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -301,7 +301,7 @@ func (x *TaxGroup) String() string {
 func (*TaxGroup) ProtoMessage() {}
 
 func (x *TaxGroup) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[2]
+	mi := &file_models_publish_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -314,7 +314,7 @@ func (x *TaxGroup) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TaxGroup.ProtoReflect.Descriptor instead.
 func (*TaxGroup) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{2}
+	return file_models_publish_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *TaxGroup) GetTaxRate() string {
@@ -358,13 +358,14 @@ type PosCoupon struct {
 	TotalNoTax     int64                  `protobuf:"varint,16,opt,name=TotalNoTax,proto3" json:"TotalNoTax,omitempty"`
 	ReferenceNo    uint64                 `protobuf:"varint,17,opt,name=ReferenceNo,proto3" json:"ReferenceNo,omitempty"`
 	TransactionNo  uint64                 `protobuf:"varint,18,opt,name=TransactionNo,proto3" json:"TransactionNo,omitempty"`
+	TotalDiscount  int64                  `protobuf:"varint,19,opt,name=TotalDiscount,proto3" json:"TotalDiscount,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
 
 func (x *PosCoupon) Reset() {
 	*x = PosCoupon{}
-	mi := &file_models_proto_msgTypes[3]
+	mi := &file_models_publish_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -376,7 +377,7 @@ func (x *PosCoupon) String() string {
 func (*PosCoupon) ProtoMessage() {}
 
 func (x *PosCoupon) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[3]
+	mi := &file_models_publish_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -389,7 +390,7 @@ func (x *PosCoupon) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PosCoupon.ProtoReflect.Descriptor instead.
 func (*PosCoupon) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{3}
+	return file_models_publish_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *PosCoupon) GetBusinessId() uint64 {
@@ -518,6 +519,13 @@ func (x *PosCoupon) GetTransactionNo() uint64 {
 	return 0
 }
 
+func (x *PosCoupon) GetTotalDiscount() int64 {
+	if x != nil {
+		return x.TotalDiscount
+	}
+	return 0
+}
+
 type CitizenCoupon struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	BusinessId     uint64                 `protobuf:"varint,1,opt,name=BusinessId,proto3" json:"BusinessId,omitempty"`
@@ -537,7 +545,7 @@ type CitizenCoupon struct {
 
 func (x *CitizenCoupon) Reset() {
 	*x = CitizenCoupon{}
-	mi := &file_models_proto_msgTypes[4]
+	mi := &file_models_publish_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -549,7 +557,7 @@ func (x *CitizenCoupon) String() string {
 func (*CitizenCoupon) ProtoMessage() {}
 
 func (x *CitizenCoupon) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[4]
+	mi := &file_models_publish_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -562,7 +570,7 @@ func (x *CitizenCoupon) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CitizenCoupon.ProtoReflect.Descriptor instead.
 func (*CitizenCoupon) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{4}
+	return file_models_publish_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CitizenCoupon) GetBusinessId() uint64 {
@@ -659,7 +667,7 @@ type QrCoupon struct {
 
 func (x *QrCoupon) Reset() {
 	*x = QrCoupon{}
-	mi := &file_models_proto_msgTypes[5]
+	mi := &file_models_publish_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -671,7 +679,7 @@ func (x *QrCoupon) String() string {
 func (*QrCoupon) ProtoMessage() {}
 
 func (x *QrCoupon) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[5]
+	mi := &file_models_publish_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -684,7 +692,7 @@ func (x *QrCoupon) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QrCoupon.ProtoReflect.Descriptor instead.
 func (*QrCoupon) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{5}
+	return file_models_publish_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *QrCoupon) GetBusinessId() uint64 {
@@ -750,887 +758,11 @@ func (x *QrCoupon) GetTotalTax() int64 {
 	return 0
 }
 
-type BusinessOnboarded struct {
-	state          protoimpl.MessageState `protogen:"open.v1"`
-	BusinessName   string                 `protobuf:"bytes,1,opt,name=BusinessName,proto3" json:"BusinessName,omitempty"`
-	BusinessID     uint64                 `protobuf:"varint,2,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	BranchID       uint64                 `protobuf:"varint,3,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	ApplicationID  uint64                 `protobuf:"varint,4,opt,name=ApplicationID,proto3" json:"ApplicationID,omitempty"`
-	PosID          uint64                 `protobuf:"varint,5,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	VerificationNo uint64                 `protobuf:"varint,6,opt,name=VerificationNo,proto3" json:"VerificationNo,omitempty"`
-	Certificate    string                 `protobuf:"bytes,7,opt,name=Certificate,proto3" json:"Certificate,omitempty"`
-	Timestamp      int64                  `protobuf:"varint,8,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
-}
+var File_models_publish_proto protoreflect.FileDescriptor
 
-func (x *BusinessOnboarded) Reset() {
-	*x = BusinessOnboarded{}
-	mi := &file_models_proto_msgTypes[6]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *BusinessOnboarded) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*BusinessOnboarded) ProtoMessage() {}
-
-func (x *BusinessOnboarded) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[6]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use BusinessOnboarded.ProtoReflect.Descriptor instead.
-func (*BusinessOnboarded) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *BusinessOnboarded) GetBusinessName() string {
-	if x != nil {
-		return x.BusinessName
-	}
-	return ""
-}
-
-func (x *BusinessOnboarded) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *BusinessOnboarded) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *BusinessOnboarded) GetApplicationID() uint64 {
-	if x != nil {
-		return x.ApplicationID
-	}
-	return 0
-}
-
-func (x *BusinessOnboarded) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *BusinessOnboarded) GetVerificationNo() uint64 {
-	if x != nil {
-		return x.VerificationNo
-	}
-	return 0
-}
-
-func (x *BusinessOnboarded) GetCertificate() string {
-	if x != nil {
-		return x.Certificate
-	}
-	return ""
-}
-
-func (x *BusinessOnboarded) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-type CertificateDisabled struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	BusinessID    uint64                 `protobuf:"varint,1,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	BranchID      uint64                 `protobuf:"varint,2,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	PosID         uint64                 `protobuf:"varint,3,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	Message       string                 `protobuf:"bytes,4,opt,name=Message,proto3" json:"Message,omitempty"`
-	DisabledAt    int64                  `protobuf:"varint,5,opt,name=DisabledAt,proto3" json:"DisabledAt,omitempty"`
-	Timestamp     int64                  `protobuf:"varint,6,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *CertificateDisabled) Reset() {
-	*x = CertificateDisabled{}
-	mi := &file_models_proto_msgTypes[7]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CertificateDisabled) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CertificateDisabled) ProtoMessage() {}
-
-func (x *CertificateDisabled) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[7]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CertificateDisabled.ProtoReflect.Descriptor instead.
-func (*CertificateDisabled) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{7}
-}
-
-func (x *CertificateDisabled) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *CertificateDisabled) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *CertificateDisabled) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *CertificateDisabled) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
-
-func (x *CertificateDisabled) GetDisabledAt() int64 {
-	if x != nil {
-		return x.DisabledAt
-	}
-	return 0
-}
-
-func (x *CertificateDisabled) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-type CertificateEnabled struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	BusinessID    uint64                 `protobuf:"varint,1,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	BranchID      uint64                 `protobuf:"varint,2,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	PosID         uint64                 `protobuf:"varint,3,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	Message       string                 `protobuf:"bytes,4,opt,name=Message,proto3" json:"Message,omitempty"`
-	EnabledAt     int64                  `protobuf:"varint,5,opt,name=EnabledAt,proto3" json:"EnabledAt,omitempty"`
-	Timestamp     int64                  `protobuf:"varint,6,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *CertificateEnabled) Reset() {
-	*x = CertificateEnabled{}
-	mi := &file_models_proto_msgTypes[8]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CertificateEnabled) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CertificateEnabled) ProtoMessage() {}
-
-func (x *CertificateEnabled) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[8]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CertificateEnabled.ProtoReflect.Descriptor instead.
-func (*CertificateEnabled) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *CertificateEnabled) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *CertificateEnabled) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *CertificateEnabled) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *CertificateEnabled) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
-
-func (x *CertificateEnabled) GetEnabledAt() int64 {
-	if x != nil {
-		return x.EnabledAt
-	}
-	return 0
-}
-
-func (x *CertificateEnabled) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-type CitizenFiscalCouponReceived struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	CitizenID     uint64                 `protobuf:"varint,1,opt,name=CitizenID,proto3" json:"CitizenID,omitempty"`
-	BusinessID    uint64                 `protobuf:"varint,2,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	BranchID      uint64                 `protobuf:"varint,3,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	CouponID      uint64                 `protobuf:"varint,4,opt,name=CouponID,proto3" json:"CouponID,omitempty"`
-	PosID         uint64                 `protobuf:"varint,5,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	Type          CouponType             `protobuf:"varint,6,opt,name=Type,proto3,enum=atk.CouponType" json:"Type,omitempty"`
-	Time          int64                  `protobuf:"varint,7,opt,name=Time,proto3" json:"Time,omitempty"`
-	TaxGroups     []*TaxGroup            `protobuf:"bytes,8,rep,name=TaxGroups,proto3" json:"TaxGroups,omitempty"`
-	TotalTax      int64                  `protobuf:"varint,9,opt,name=TotalTax,proto3" json:"TotalTax,omitempty"`
-	Total         int64                  `protobuf:"varint,10,opt,name=Total,proto3" json:"Total,omitempty"`
-	Timestamp     int64                  `protobuf:"varint,11,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *CitizenFiscalCouponReceived) Reset() {
-	*x = CitizenFiscalCouponReceived{}
-	mi := &file_models_proto_msgTypes[9]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CitizenFiscalCouponReceived) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CitizenFiscalCouponReceived) ProtoMessage() {}
-
-func (x *CitizenFiscalCouponReceived) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[9]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CitizenFiscalCouponReceived.ProtoReflect.Descriptor instead.
-func (*CitizenFiscalCouponReceived) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{9}
-}
-
-func (x *CitizenFiscalCouponReceived) GetCitizenID() uint64 {
-	if x != nil {
-		return x.CitizenID
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetCouponID() uint64 {
-	if x != nil {
-		return x.CouponID
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetType() CouponType {
-	if x != nil {
-		return x.Type
-	}
-	return CouponType_UnknownType
-}
-
-func (x *CitizenFiscalCouponReceived) GetTime() int64 {
-	if x != nil {
-		return x.Time
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetTaxGroups() []*TaxGroup {
-	if x != nil {
-		return x.TaxGroups
-	}
-	return nil
-}
-
-func (x *CitizenFiscalCouponReceived) GetTotalTax() int64 {
-	if x != nil {
-		return x.TotalTax
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetTotal() int64 {
-	if x != nil {
-		return x.Total
-	}
-	return 0
-}
-
-func (x *CitizenFiscalCouponReceived) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-type CitizenRegistered struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	CitizenID     uint64                 `protobuf:"varint,1,opt,name=CitizenID,proto3" json:"CitizenID,omitempty"`
-	Name          string                 `protobuf:"bytes,2,opt,name=Name,proto3" json:"Name,omitempty"`
-	Surname       string                 `protobuf:"bytes,3,opt,name=Surname,proto3" json:"Surname,omitempty"`
-	Email         string                 `protobuf:"bytes,4,opt,name=Email,proto3" json:"Email,omitempty"`
-	Mobile        string                 `protobuf:"bytes,5,opt,name=Mobile,proto3" json:"Mobile,omitempty"`
-	Timestamp     int64                  `protobuf:"varint,6,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *CitizenRegistered) Reset() {
-	*x = CitizenRegistered{}
-	mi := &file_models_proto_msgTypes[10]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CitizenRegistered) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CitizenRegistered) ProtoMessage() {}
-
-func (x *CitizenRegistered) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[10]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CitizenRegistered.ProtoReflect.Descriptor instead.
-func (*CitizenRegistered) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{10}
-}
-
-func (x *CitizenRegistered) GetCitizenID() uint64 {
-	if x != nil {
-		return x.CitizenID
-	}
-	return 0
-}
-
-func (x *CitizenRegistered) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
-
-func (x *CitizenRegistered) GetSurname() string {
-	if x != nil {
-		return x.Surname
-	}
-	return ""
-}
-
-func (x *CitizenRegistered) GetEmail() string {
-	if x != nil {
-		return x.Email
-	}
-	return ""
-}
-
-func (x *CitizenRegistered) GetMobile() string {
-	if x != nil {
-		return x.Mobile
-	}
-	return ""
-}
-
-func (x *CitizenRegistered) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-type CouponValidated struct {
-	state          protoimpl.MessageState `protogen:"open.v1"`
-	BusinessID     uint64                 `protobuf:"varint,1,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	CouponID       uint64                 `protobuf:"varint,2,opt,name=CouponID,proto3" json:"CouponID,omitempty"`
-	BranchID       uint64                 `protobuf:"varint,3,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	PosID          uint64                 `protobuf:"varint,4,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	CitizenID      uint64                 `protobuf:"varint,5,opt,name=CitizenID,proto3" json:"CitizenID,omitempty"`
-	Location       string                 `protobuf:"bytes,6,opt,name=Location,proto3" json:"Location,omitempty"`
-	OperatorID     string                 `protobuf:"bytes,7,opt,name=OperatorID,proto3" json:"OperatorID,omitempty"`
-	ApplicationID  uint64                 `protobuf:"varint,8,opt,name=ApplicationID,proto3" json:"ApplicationID,omitempty"`
-	Type           CouponType             `protobuf:"varint,9,opt,name=Type,proto3,enum=atk.CouponType" json:"Type,omitempty"`
-	ReferenceNo    uint64                 `protobuf:"varint,10,opt,name=ReferenceNo,proto3" json:"ReferenceNo,omitempty"`
-	Time           int64                  `protobuf:"varint,11,opt,name=Time,proto3" json:"Time,omitempty"`
-	Items          []*CouponItem          `protobuf:"bytes,12,rep,name=Items,proto3" json:"Items,omitempty"`
-	Payments       []*Payment             `protobuf:"bytes,13,rep,name=Payments,proto3" json:"Payments,omitempty"`
-	Total          int64                  `protobuf:"varint,14,opt,name=Total,proto3" json:"Total,omitempty"`
-	TaxGroups      []*TaxGroup            `protobuf:"bytes,15,rep,name=TaxGroups,proto3" json:"TaxGroups,omitempty"`
-	TotalTax       int64                  `protobuf:"varint,16,opt,name=TotalTax,proto3" json:"TotalTax,omitempty"`
-	TotalNoTax     int64                  `protobuf:"varint,17,opt,name=TotalNoTax,proto3" json:"TotalNoTax,omitempty"`
-	TransactionNo  uint64                 `protobuf:"varint,18,opt,name=TransactionNo,proto3" json:"TransactionNo,omitempty"`
-	Status         string                 `protobuf:"bytes,19,opt,name=Status,proto3" json:"Status,omitempty"`
-	ValidatedAt    int64                  `protobuf:"varint,20,opt,name=ValidatedAt,proto3" json:"ValidatedAt,omitempty"`
-	Timestamp      int64                  `protobuf:"varint,21,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	VerificationNo string                 `protobuf:"bytes,22,opt,name=VerificationNo,proto3" json:"VerificationNo,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
-}
-
-func (x *CouponValidated) Reset() {
-	*x = CouponValidated{}
-	mi := &file_models_proto_msgTypes[11]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CouponValidated) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CouponValidated) ProtoMessage() {}
-
-func (x *CouponValidated) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[11]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CouponValidated.ProtoReflect.Descriptor instead.
-func (*CouponValidated) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{11}
-}
-
-func (x *CouponValidated) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetCouponID() uint64 {
-	if x != nil {
-		return x.CouponID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetCitizenID() uint64 {
-	if x != nil {
-		return x.CitizenID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetLocation() string {
-	if x != nil {
-		return x.Location
-	}
-	return ""
-}
-
-func (x *CouponValidated) GetOperatorID() string {
-	if x != nil {
-		return x.OperatorID
-	}
-	return ""
-}
-
-func (x *CouponValidated) GetApplicationID() uint64 {
-	if x != nil {
-		return x.ApplicationID
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetType() CouponType {
-	if x != nil {
-		return x.Type
-	}
-	return CouponType_UnknownType
-}
-
-func (x *CouponValidated) GetReferenceNo() uint64 {
-	if x != nil {
-		return x.ReferenceNo
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetTime() int64 {
-	if x != nil {
-		return x.Time
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetItems() []*CouponItem {
-	if x != nil {
-		return x.Items
-	}
-	return nil
-}
-
-func (x *CouponValidated) GetPayments() []*Payment {
-	if x != nil {
-		return x.Payments
-	}
-	return nil
-}
-
-func (x *CouponValidated) GetTotal() int64 {
-	if x != nil {
-		return x.Total
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetTaxGroups() []*TaxGroup {
-	if x != nil {
-		return x.TaxGroups
-	}
-	return nil
-}
-
-func (x *CouponValidated) GetTotalTax() int64 {
-	if x != nil {
-		return x.TotalTax
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetTotalNoTax() int64 {
-	if x != nil {
-		return x.TotalNoTax
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetTransactionNo() uint64 {
-	if x != nil {
-		return x.TransactionNo
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetStatus() string {
-	if x != nil {
-		return x.Status
-	}
-	return ""
-}
-
-func (x *CouponValidated) GetValidatedAt() int64 {
-	if x != nil {
-		return x.ValidatedAt
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-func (x *CouponValidated) GetVerificationNo() string {
-	if x != nil {
-		return x.VerificationNo
-	}
-	return ""
-}
-
-type PosFiscalCouponReceived struct {
-	state          protoimpl.MessageState `protogen:"open.v1"`
-	BusinessID     uint64                 `protobuf:"varint,1,opt,name=BusinessID,proto3" json:"BusinessID,omitempty"`
-	CouponID       uint64                 `protobuf:"varint,2,opt,name=CouponID,proto3" json:"CouponID,omitempty"`
-	BranchID       uint64                 `protobuf:"varint,3,opt,name=BranchID,proto3" json:"BranchID,omitempty"`
-	Location       string                 `protobuf:"bytes,4,opt,name=Location,proto3" json:"Location,omitempty"`
-	OperatorID     string                 `protobuf:"bytes,5,opt,name=OperatorID,proto3" json:"OperatorID,omitempty"`
-	ApplicationID  uint64                 `protobuf:"varint,6,opt,name=ApplicationID,proto3" json:"ApplicationID,omitempty"`
-	PosID          uint64                 `protobuf:"varint,7,opt,name=PosID,proto3" json:"PosID,omitempty"`
-	VerificationNo string                 `protobuf:"bytes,8,opt,name=VerificationNo,proto3" json:"VerificationNo,omitempty"`
-	Type           CouponType             `protobuf:"varint,9,opt,name=Type,proto3,enum=atk.CouponType" json:"Type,omitempty"`
-	ReferenceNo    uint64                 `protobuf:"varint,10,opt,name=ReferenceNo,proto3" json:"ReferenceNo,omitempty"`
-	Time           int64                  `protobuf:"varint,11,opt,name=Time,proto3" json:"Time,omitempty"`
-	Items          []*CouponItem          `protobuf:"bytes,12,rep,name=Items,proto3" json:"Items,omitempty"`
-	Payments       []*Payment             `protobuf:"bytes,13,rep,name=Payments,proto3" json:"Payments,omitempty"`
-	Total          int64                  `protobuf:"varint,14,opt,name=Total,proto3" json:"Total,omitempty"`
-	TaxGroups      []*TaxGroup            `protobuf:"bytes,15,rep,name=TaxGroups,proto3" json:"TaxGroups,omitempty"`
-	TotalTax       int64                  `protobuf:"varint,16,opt,name=TotalTax,proto3" json:"TotalTax,omitempty"`
-	TotalNoTax     int64                  `protobuf:"varint,17,opt,name=TotalNoTax,proto3" json:"TotalNoTax,omitempty"`
-	TransactionNo  uint64                 `protobuf:"varint,18,opt,name=TransactionNo,proto3" json:"TransactionNo,omitempty"`
-	Timestamp      int64                  `protobuf:"varint,19,opt,name=Timestamp,proto3" json:"Timestamp,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
-}
-
-func (x *PosFiscalCouponReceived) Reset() {
-	*x = PosFiscalCouponReceived{}
-	mi := &file_models_proto_msgTypes[12]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *PosFiscalCouponReceived) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PosFiscalCouponReceived) ProtoMessage() {}
-
-func (x *PosFiscalCouponReceived) ProtoReflect() protoreflect.Message {
-	mi := &file_models_proto_msgTypes[12]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PosFiscalCouponReceived.ProtoReflect.Descriptor instead.
-func (*PosFiscalCouponReceived) Descriptor() ([]byte, []int) {
-	return file_models_proto_rawDescGZIP(), []int{12}
-}
-
-func (x *PosFiscalCouponReceived) GetBusinessID() uint64 {
-	if x != nil {
-		return x.BusinessID
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetCouponID() uint64 {
-	if x != nil {
-		return x.CouponID
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetBranchID() uint64 {
-	if x != nil {
-		return x.BranchID
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetLocation() string {
-	if x != nil {
-		return x.Location
-	}
-	return ""
-}
-
-func (x *PosFiscalCouponReceived) GetOperatorID() string {
-	if x != nil {
-		return x.OperatorID
-	}
-	return ""
-}
-
-func (x *PosFiscalCouponReceived) GetApplicationID() uint64 {
-	if x != nil {
-		return x.ApplicationID
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetPosID() uint64 {
-	if x != nil {
-		return x.PosID
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetVerificationNo() string {
-	if x != nil {
-		return x.VerificationNo
-	}
-	return ""
-}
-
-func (x *PosFiscalCouponReceived) GetType() CouponType {
-	if x != nil {
-		return x.Type
-	}
-	return CouponType_UnknownType
-}
-
-func (x *PosFiscalCouponReceived) GetReferenceNo() uint64 {
-	if x != nil {
-		return x.ReferenceNo
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetTime() int64 {
-	if x != nil {
-		return x.Time
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetItems() []*CouponItem {
-	if x != nil {
-		return x.Items
-	}
-	return nil
-}
-
-func (x *PosFiscalCouponReceived) GetPayments() []*Payment {
-	if x != nil {
-		return x.Payments
-	}
-	return nil
-}
-
-func (x *PosFiscalCouponReceived) GetTotal() int64 {
-	if x != nil {
-		return x.Total
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetTaxGroups() []*TaxGroup {
-	if x != nil {
-		return x.TaxGroups
-	}
-	return nil
-}
-
-func (x *PosFiscalCouponReceived) GetTotalTax() int64 {
-	if x != nil {
-		return x.TotalTax
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetTotalNoTax() int64 {
-	if x != nil {
-		return x.TotalNoTax
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetTransactionNo() uint64 {
-	if x != nil {
-		return x.TransactionNo
-	}
-	return 0
-}
-
-func (x *PosFiscalCouponReceived) GetTimestamp() int64 {
-	if x != nil {
-		return x.Timestamp
-	}
-	return 0
-}
-
-var File_models_proto protoreflect.FileDescriptor
-
-const file_models_proto_rawDesc = "" +
+const file_models_publish_proto_rawDesc = "" +
 	"\n" +
-	"\fmodels.proto\x12\x03atk\"\xaa\x01\n" +
+	"\x14models_publish.proto\x12\x03atk\"\xaa\x01\n" +
 	"\n" +
 	"CouponItem\x12\x12\n" +
 	"\x04Name\x18\x01 \x01(\tR\x04Name\x12\x14\n" +
@@ -1646,7 +778,7 @@ const file_models_proto_rawDesc = "" +
 	"\bTaxGroup\x12\x18\n" +
 	"\aTaxRate\x18\x01 \x01(\tR\aTaxRate\x12 \n" +
 	"\vTotalForTax\x18\x02 \x01(\x03R\vTotalForTax\x12\x1a\n" +
-	"\bTotalTax\x18\x03 \x01(\x03R\bTotalTax\"\xd4\x04\n" +
+	"\bTotalTax\x18\x03 \x01(\x03R\bTotalTax\"\xfa\x04\n" +
 	"\tPosCoupon\x12\x1e\n" +
 	"\n" +
 	"BusinessId\x18\x01 \x01(\x04R\n" +
@@ -1672,7 +804,8 @@ const file_models_proto_rawDesc = "" +
 	"TotalNoTax\x18\x10 \x01(\x03R\n" +
 	"TotalNoTax\x12 \n" +
 	"\vReferenceNo\x18\x11 \x01(\x04R\vReferenceNo\x12$\n" +
-	"\rTransactionNo\x18\x12 \x01(\x04R\rTransactionNo\"\xdd\x02\n" +
+	"\rTransactionNo\x18\x12 \x01(\x04R\rTransactionNo\x12$\n" +
+	"\rTotalDiscount\x18\x13 \x01(\x03R\rTotalDiscount\"\xdd\x02\n" +
 	"\rCitizenCoupon\x12\x1e\n" +
 	"\n" +
 	"BusinessId\x18\x01 \x01(\x04R\n" +
@@ -1701,117 +834,7 @@ const file_models_proto_rawDesc = "" +
 	"\x04Time\x18\x06 \x01(\x03R\x04Time\x12\x14\n" +
 	"\x05Total\x18\a \x01(\x03R\x05Total\x12+\n" +
 	"\tTaxGroups\x18\b \x03(\v2\r.atk.TaxGroupR\tTaxGroups\x12\x1a\n" +
-	"\bTotalTax\x18\t \x01(\x03R\bTotalTax\"\x97\x02\n" +
-	"\x11BusinessOnboarded\x12\"\n" +
-	"\fBusinessName\x18\x01 \x01(\tR\fBusinessName\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x02 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bBranchID\x18\x03 \x01(\x04R\bBranchID\x12$\n" +
-	"\rApplicationID\x18\x04 \x01(\x04R\rApplicationID\x12\x14\n" +
-	"\x05PosID\x18\x05 \x01(\x04R\x05PosID\x12&\n" +
-	"\x0eVerificationNo\x18\x06 \x01(\x04R\x0eVerificationNo\x12 \n" +
-	"\vCertificate\x18\a \x01(\tR\vCertificate\x12\x1c\n" +
-	"\tTimestamp\x18\b \x01(\x03R\tTimestamp\"\xbf\x01\n" +
-	"\x13CertificateDisabled\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x01 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bBranchID\x18\x02 \x01(\x04R\bBranchID\x12\x14\n" +
-	"\x05PosID\x18\x03 \x01(\x04R\x05PosID\x12\x18\n" +
-	"\aMessage\x18\x04 \x01(\tR\aMessage\x12\x1e\n" +
-	"\n" +
-	"DisabledAt\x18\x05 \x01(\x03R\n" +
-	"DisabledAt\x12\x1c\n" +
-	"\tTimestamp\x18\x06 \x01(\x03R\tTimestamp\"\xbc\x01\n" +
-	"\x12CertificateEnabled\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x01 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bBranchID\x18\x02 \x01(\x04R\bBranchID\x12\x14\n" +
-	"\x05PosID\x18\x03 \x01(\x04R\x05PosID\x12\x18\n" +
-	"\aMessage\x18\x04 \x01(\tR\aMessage\x12\x1c\n" +
-	"\tEnabledAt\x18\x05 \x01(\x03R\tEnabledAt\x12\x1c\n" +
-	"\tTimestamp\x18\x06 \x01(\x03R\tTimestamp\"\xdf\x02\n" +
-	"\x1bCitizenFiscalCouponReceived\x12\x1c\n" +
-	"\tCitizenID\x18\x01 \x01(\x04R\tCitizenID\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x02 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bBranchID\x18\x03 \x01(\x04R\bBranchID\x12\x1a\n" +
-	"\bCouponID\x18\x04 \x01(\x04R\bCouponID\x12\x14\n" +
-	"\x05PosID\x18\x05 \x01(\x04R\x05PosID\x12#\n" +
-	"\x04Type\x18\x06 \x01(\x0e2\x0f.atk.CouponTypeR\x04Type\x12\x12\n" +
-	"\x04Time\x18\a \x01(\x03R\x04Time\x12+\n" +
-	"\tTaxGroups\x18\b \x03(\v2\r.atk.TaxGroupR\tTaxGroups\x12\x1a\n" +
-	"\bTotalTax\x18\t \x01(\x03R\bTotalTax\x12\x14\n" +
-	"\x05Total\x18\n" +
-	" \x01(\x03R\x05Total\x12\x1c\n" +
-	"\tTimestamp\x18\v \x01(\x03R\tTimestamp\"\xab\x01\n" +
-	"\x11CitizenRegistered\x12\x1c\n" +
-	"\tCitizenID\x18\x01 \x01(\x04R\tCitizenID\x12\x12\n" +
-	"\x04Name\x18\x02 \x01(\tR\x04Name\x12\x18\n" +
-	"\aSurname\x18\x03 \x01(\tR\aSurname\x12\x14\n" +
-	"\x05Email\x18\x04 \x01(\tR\x05Email\x12\x16\n" +
-	"\x06Mobile\x18\x05 \x01(\tR\x06Mobile\x12\x1c\n" +
-	"\tTimestamp\x18\x06 \x01(\x03R\tTimestamp\"\xd0\x05\n" +
-	"\x0fCouponValidated\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x01 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bCouponID\x18\x02 \x01(\x04R\bCouponID\x12\x1a\n" +
-	"\bBranchID\x18\x03 \x01(\x04R\bBranchID\x12\x14\n" +
-	"\x05PosID\x18\x04 \x01(\x04R\x05PosID\x12\x1c\n" +
-	"\tCitizenID\x18\x05 \x01(\x04R\tCitizenID\x12\x1a\n" +
-	"\bLocation\x18\x06 \x01(\tR\bLocation\x12\x1e\n" +
-	"\n" +
-	"OperatorID\x18\a \x01(\tR\n" +
-	"OperatorID\x12$\n" +
-	"\rApplicationID\x18\b \x01(\x04R\rApplicationID\x12#\n" +
-	"\x04Type\x18\t \x01(\x0e2\x0f.atk.CouponTypeR\x04Type\x12 \n" +
-	"\vReferenceNo\x18\n" +
-	" \x01(\x04R\vReferenceNo\x12\x12\n" +
-	"\x04Time\x18\v \x01(\x03R\x04Time\x12%\n" +
-	"\x05Items\x18\f \x03(\v2\x0f.atk.CouponItemR\x05Items\x12(\n" +
-	"\bPayments\x18\r \x03(\v2\f.atk.PaymentR\bPayments\x12\x14\n" +
-	"\x05Total\x18\x0e \x01(\x03R\x05Total\x12+\n" +
-	"\tTaxGroups\x18\x0f \x03(\v2\r.atk.TaxGroupR\tTaxGroups\x12\x1a\n" +
-	"\bTotalTax\x18\x10 \x01(\x03R\bTotalTax\x12\x1e\n" +
-	"\n" +
-	"TotalNoTax\x18\x11 \x01(\x03R\n" +
-	"TotalNoTax\x12$\n" +
-	"\rTransactionNo\x18\x12 \x01(\x04R\rTransactionNo\x12\x16\n" +
-	"\x06Status\x18\x13 \x01(\tR\x06Status\x12 \n" +
-	"\vValidatedAt\x18\x14 \x01(\x03R\vValidatedAt\x12\x1c\n" +
-	"\tTimestamp\x18\x15 \x01(\x03R\tTimestamp\x12&\n" +
-	"\x0eVerificationNo\x18\x16 \x01(\tR\x0eVerificationNo\"\x80\x05\n" +
-	"\x17PosFiscalCouponReceived\x12\x1e\n" +
-	"\n" +
-	"BusinessID\x18\x01 \x01(\x04R\n" +
-	"BusinessID\x12\x1a\n" +
-	"\bCouponID\x18\x02 \x01(\x04R\bCouponID\x12\x1a\n" +
-	"\bBranchID\x18\x03 \x01(\x04R\bBranchID\x12\x1a\n" +
-	"\bLocation\x18\x04 \x01(\tR\bLocation\x12\x1e\n" +
-	"\n" +
-	"OperatorID\x18\x05 \x01(\tR\n" +
-	"OperatorID\x12$\n" +
-	"\rApplicationID\x18\x06 \x01(\x04R\rApplicationID\x12\x14\n" +
-	"\x05PosID\x18\a \x01(\x04R\x05PosID\x12&\n" +
-	"\x0eVerificationNo\x18\b \x01(\tR\x0eVerificationNo\x12#\n" +
-	"\x04Type\x18\t \x01(\x0e2\x0f.atk.CouponTypeR\x04Type\x12 \n" +
-	"\vReferenceNo\x18\n" +
-	" \x01(\x04R\vReferenceNo\x12\x12\n" +
-	"\x04Time\x18\v \x01(\x03R\x04Time\x12%\n" +
-	"\x05Items\x18\f \x03(\v2\x0f.atk.CouponItemR\x05Items\x12(\n" +
-	"\bPayments\x18\r \x03(\v2\f.atk.PaymentR\bPayments\x12\x14\n" +
-	"\x05Total\x18\x0e \x01(\x03R\x05Total\x12+\n" +
-	"\tTaxGroups\x18\x0f \x03(\v2\r.atk.TaxGroupR\tTaxGroups\x12\x1a\n" +
-	"\bTotalTax\x18\x10 \x01(\x03R\bTotalTax\x12\x1e\n" +
-	"\n" +
-	"TotalNoTax\x18\x11 \x01(\x03R\n" +
-	"TotalNoTax\x12$\n" +
-	"\rTransactionNo\x18\x12 \x01(\x04R\rTransactionNo\x12\x1c\n" +
-	"\tTimestamp\x18\x13 \x01(\x03R\tTimestamp*?\n" +
+	"\bTotalTax\x18\t \x01(\x03R\bTotalTax*?\n" +
 	"\n" +
 	"CouponType\x12\x0f\n" +
 	"\vUnknownType\x10\x00\x12\b\n" +
@@ -1832,84 +855,67 @@ const file_models_proto_rawDesc = "" +
 	"\x05Other\x10\x06B\tZ\a./protob\x06proto3"
 
 var (
-	file_models_proto_rawDescOnce sync.Once
-	file_models_proto_rawDescData []byte
+	file_models_publish_proto_rawDescOnce sync.Once
+	file_models_publish_proto_rawDescData []byte
 )
 
-func file_models_proto_rawDescGZIP() []byte {
-	file_models_proto_rawDescOnce.Do(func() {
-		file_models_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_models_proto_rawDesc), len(file_models_proto_rawDesc)))
+func file_models_publish_proto_rawDescGZIP() []byte {
+	file_models_publish_proto_rawDescOnce.Do(func() {
+		file_models_publish_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_models_publish_proto_rawDesc), len(file_models_publish_proto_rawDesc)))
 	})
-	return file_models_proto_rawDescData
+	return file_models_publish_proto_rawDescData
 }
 
-var file_models_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_models_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
-var file_models_proto_goTypes = []any{
-	(CouponType)(0),                     // 0: atk.CouponType
-	(PaymentType)(0),                    // 1: atk.PaymentType
-	(*CouponItem)(nil),                  // 2: atk.CouponItem
-	(*Payment)(nil),                     // 3: atk.Payment
-	(*TaxGroup)(nil),                    // 4: atk.TaxGroup
-	(*PosCoupon)(nil),                   // 5: atk.PosCoupon
-	(*CitizenCoupon)(nil),               // 6: atk.CitizenCoupon
-	(*QrCoupon)(nil),                    // 7: atk.QrCoupon
-	(*BusinessOnboarded)(nil),           // 8: atk.BusinessOnboarded
-	(*CertificateDisabled)(nil),         // 9: atk.CertificateDisabled
-	(*CertificateEnabled)(nil),          // 10: atk.CertificateEnabled
-	(*CitizenFiscalCouponReceived)(nil), // 11: atk.CitizenFiscalCouponReceived
-	(*CitizenRegistered)(nil),           // 12: atk.CitizenRegistered
-	(*CouponValidated)(nil),             // 13: atk.CouponValidated
-	(*PosFiscalCouponReceived)(nil),     // 14: atk.PosFiscalCouponReceived
+var file_models_publish_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_models_publish_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_models_publish_proto_goTypes = []any{
+	(CouponType)(0),       // 0: atk.CouponType
+	(PaymentType)(0),      // 1: atk.PaymentType
+	(*CouponItem)(nil),    // 2: atk.CouponItem
+	(*Payment)(nil),       // 3: atk.Payment
+	(*TaxGroup)(nil),      // 4: atk.TaxGroup
+	(*PosCoupon)(nil),     // 5: atk.PosCoupon
+	(*CitizenCoupon)(nil), // 6: atk.CitizenCoupon
+	(*QrCoupon)(nil),      // 7: atk.QrCoupon
 }
-var file_models_proto_depIdxs = []int32{
-	1,  // 0: atk.Payment.Type:type_name -> atk.PaymentType
-	0,  // 1: atk.PosCoupon.Type:type_name -> atk.CouponType
-	2,  // 2: atk.PosCoupon.Items:type_name -> atk.CouponItem
-	3,  // 3: atk.PosCoupon.Payments:type_name -> atk.Payment
-	4,  // 4: atk.PosCoupon.TaxGroups:type_name -> atk.TaxGroup
-	0,  // 5: atk.CitizenCoupon.Type:type_name -> atk.CouponType
-	4,  // 6: atk.CitizenCoupon.TaxGroups:type_name -> atk.TaxGroup
-	0,  // 7: atk.QrCoupon.Type:type_name -> atk.CouponType
-	4,  // 8: atk.QrCoupon.TaxGroups:type_name -> atk.TaxGroup
-	0,  // 9: atk.CitizenFiscalCouponReceived.Type:type_name -> atk.CouponType
-	4,  // 10: atk.CitizenFiscalCouponReceived.TaxGroups:type_name -> atk.TaxGroup
-	0,  // 11: atk.CouponValidated.Type:type_name -> atk.CouponType
-	2,  // 12: atk.CouponValidated.Items:type_name -> atk.CouponItem
-	3,  // 13: atk.CouponValidated.Payments:type_name -> atk.Payment
-	4,  // 14: atk.CouponValidated.TaxGroups:type_name -> atk.TaxGroup
-	0,  // 15: atk.PosFiscalCouponReceived.Type:type_name -> atk.CouponType
-	2,  // 16: atk.PosFiscalCouponReceived.Items:type_name -> atk.CouponItem
-	3,  // 17: atk.PosFiscalCouponReceived.Payments:type_name -> atk.Payment
-	4,  // 18: atk.PosFiscalCouponReceived.TaxGroups:type_name -> atk.TaxGroup
-	19, // [19:19] is the sub-list for method output_type
-	19, // [19:19] is the sub-list for method input_type
-	19, // [19:19] is the sub-list for extension type_name
-	19, // [19:19] is the sub-list for extension extendee
-	0,  // [0:19] is the sub-list for field type_name
+var file_models_publish_proto_depIdxs = []int32{
+	1, // 0: atk.Payment.Type:type_name -> atk.PaymentType
+	0, // 1: atk.PosCoupon.Type:type_name -> atk.CouponType
+	2, // 2: atk.PosCoupon.Items:type_name -> atk.CouponItem
+	3, // 3: atk.PosCoupon.Payments:type_name -> atk.Payment
+	4, // 4: atk.PosCoupon.TaxGroups:type_name -> atk.TaxGroup
+	0, // 5: atk.CitizenCoupon.Type:type_name -> atk.CouponType
+	4, // 6: atk.CitizenCoupon.TaxGroups:type_name -> atk.TaxGroup
+	0, // 7: atk.QrCoupon.Type:type_name -> atk.CouponType
+	4, // 8: atk.QrCoupon.TaxGroups:type_name -> atk.TaxGroup
+	9, // [9:9] is the sub-list for method output_type
+	9, // [9:9] is the sub-list for method input_type
+	9, // [9:9] is the sub-list for extension type_name
+	9, // [9:9] is the sub-list for extension extendee
+	0, // [0:9] is the sub-list for field type_name
 }
 
-func init() { file_models_proto_init() }
-func file_models_proto_init() {
-	if File_models_proto != nil {
+func init() { file_models_publish_proto_init() }
+func file_models_publish_proto_init() {
+	if File_models_publish_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_models_proto_rawDesc), len(file_models_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_models_publish_proto_rawDesc), len(file_models_publish_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   13,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_models_proto_goTypes,
-		DependencyIndexes: file_models_proto_depIdxs,
-		EnumInfos:         file_models_proto_enumTypes,
-		MessageInfos:      file_models_proto_msgTypes,
+		GoTypes:           file_models_publish_proto_goTypes,
+		DependencyIndexes: file_models_publish_proto_depIdxs,
+		EnumInfos:         file_models_publish_proto_enumTypes,
+		MessageInfos:      file_models_publish_proto_msgTypes,
 	}.Build()
-	File_models_proto = out.File
-	file_models_proto_goTypes = nil
-	file_models_proto_depIdxs = nil
+	File_models_publish_proto = out.File
+	file_models_publish_proto_goTypes = nil
+	file_models_publish_proto_depIdxs = nil
 }

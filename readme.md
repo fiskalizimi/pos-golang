@@ -157,8 +157,9 @@ func GetPosCoupon() *proto.PosCoupon {
 			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
 			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
 		},
-		TotalTax:   215,
-		TotalNoTax: 1605,
+		TotalTax:     215,
+		TotalNoTax:  1605,
+		TotalDiscount: 75,
 	}
 }
 
@@ -183,6 +184,7 @@ The POS Coupon includes:
 * **TaxGroups** is an array of ```TaxGroup``` objects. Each ```TaxGroup``` object represents the details about tax category
 * **TotalTax** is the amount of the tax in total that customer will have to pay
 * **TotalNoTax** is the total amount without tax that customer will have to pay
+* **TotalDiscount** is the total amount of discount the customer received for this transaction 
 
 Upon receiving the POS Coupon, Fiscalisation Service will return a uniques uint64 value called ```TransactionNo```. The response will be a JSON:
 
@@ -267,7 +269,7 @@ The next step is to get ```VerificationCode``` from the Fiscalisation Service. T
 {
     "fiscalization_no" : "string" // The fiscalization number from EDI 
     "pos_id" : "uint64"           // The Pos ID to be registered
-    "branch_no" : "uint64"        // The Branch ID where the POS is located
+    "branch_id" : "uint64"        // The Branch ID where the POS is located
     "application_id" : "uint64"   // The Application ID  
 }
 ```

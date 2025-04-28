@@ -54,7 +54,8 @@ func GetPosCoupon() *proto.PosCoupon {
 			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
 			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
 		},
-		TotalTax:   215,
-		TotalNoTax: 1605,
+		TotalTax:     215,
+		TotalNoTax:  1605,
+		TotalDiscount: 75,		
 	}
 }
