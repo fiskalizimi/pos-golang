@@ -175,8 +175,41 @@ func SendPosCoupon() error {
 }
 
 func main() {
+	// simulated input values
+	csrRequest := CsrRequest{
+		Country:      "RKS",
+		BusinessName: "TEST CORP",
+		Nui:          510600700,
+		BranchId:     1,
+		PosId:        1,
+	}
+	privateKey, err := GeneratePrivateKey()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	privateKyePem, err := PrivateKey2Pem(privateKey)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("Generated Private Key:")
+	fmt.Println(string(privateKyePem))
+
+	// Create CSR
+	csr, err := CreateCSR(privateKey, csrRequest)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("Generated CSR:")
+	fmt.Println(string(csr))
+
 	fmt.Println("Sending POS Coupon ...")
-	err := SendPosCoupon()
+	err = SendPosCoupon()
 	if err != nil {
 		fmt.Println(err)
 		return
