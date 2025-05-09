@@ -374,7 +374,7 @@ After the CSR is generated and signed with the private key, then a POST request 
     "business_name" : "string"     // name of the business
     "business_id" : "uint64"       // Business ID (which is same as NUI)
     "branch_id" : "uint64"         // Branch ID
-    "verification_no": "string"    // Verification Code
+    "verification_code": "string"  // Verification Code
     "pos_id" : "uint64"            // Pos ID
     "application_id": "uint64"     // The Application ID  
     "csr" : "string"               // CSR in .pem format
