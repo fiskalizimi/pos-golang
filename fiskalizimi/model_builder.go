@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+
 func GetCitizenCoupon() *proto.CitizenCoupon {
 	return &proto.CitizenCoupon{		
 		BusinessId: 60100,
@@ -16,11 +17,12 @@ func GetCitizenCoupon() *proto.CitizenCoupon {
 		Total:      1820,
 		TaxGroups: []*proto.TaxGroup{
 			{TaxRate: "C", TotalForTax: 450, TotalTax: 0},
-			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
-			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
+			{TaxRate: "D", TotalForTax: 296, TotalTax: 24},
+			{TaxRate: "E", TotalForTax: 889, TotalTax: 161},
 		},
-		TotalTax: 215,
-		TotalNoTax: 1605,
+		TotalTax: 185,
+		TotalNoTax: 1635,
+		TotalDiscount: 0,
 	}
 }
 
@@ -51,11 +53,11 @@ func GetPosCoupon() *proto.PosCoupon {
 		Total: 1820,
 		TaxGroups: []*proto.TaxGroup{
 			{TaxRate: "C", TotalForTax: 450, TotalTax: 0},
-			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
-			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
+			{TaxRate: "D", TotalForTax: 296, TotalTax: 24},
+			{TaxRate: "E", TotalForTax: 889, TotalTax: 161},
 		},
-		TotalTax:     215,
-		TotalNoTax:  1605,
-		TotalDiscount: 75,		
+		TotalTax: 185,
+		TotalNoTax: 1635,
+		TotalDiscount: 0,	
 	}
 }

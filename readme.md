@@ -89,25 +89,29 @@ We have generated the GO code located at [```proto/models.pb.go```](fiskalizimi/
 
 ### Citizen Coupon ###
 
+>[!WARNING]
+>**NOTE:** These numbers are for representation purposes only! They do not show how to calculate tax. For proper ways of Tax calculations please consult the official documentation at [ATK site](https://www.atk-ks.org/udhezues-manuale-dhe-rregullore/)
+
 The ```CitizenCoupon``` represents a simplified receipt that will be the part of QR Code. Below is the example structure created by the [```GetCitizenCoupon```](fiskalizimi/model_builder.go) function:
 
 ```
 func GetCitizenCoupon() *proto.CitizenCoupon {
-	return &proto.CitizenCoupon{
-		BusinessId: 1,
+	return &proto.CitizenCoupon{		
+		BusinessId: 60100,
 		PosId:      1,
-		BranchId:   1,
-		CouponId:   1234,
+		CouponId:   10,
+		BranchId: 1,
 		Type:       proto.CouponType_Sale,
 		Time:       time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
 		Total:      1820,
 		TaxGroups: []*proto.TaxGroup{
 			{TaxRate: "C", TotalForTax: 450, TotalTax: 0},
-			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
-			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
+			{TaxRate: "D", TotalForTax: 296, TotalTax: 24},
+			{TaxRate: "E", TotalForTax: 889, TotalTax: 161},
 		},
-		TotalTax: 215,
-		TotalNoTax: 1605,
+		TotalTax: 185,
+		TotalNoTax: 1635,
+		TotalDiscount: 0,
 	}
 }
 ```
@@ -142,17 +146,20 @@ The Citizen Coupon includes:
 
 ### POS Coupon ###
 
+>[!WARNING]
+>**NOTE:** These numbers are for representation purposes only! They do not show how to calculate tax. For proper ways of Tax calculations please consult the official documentation at [ATK site](https://www.atk-ks.org/udhezues-manuale-dhe-rregullore/)
+
 The PosCoupon includes all details of the POS Coupon that will be printed and given to the customer. [```GetPosCoupon```](fiskalizimi/model_builder.go) returns an instance of the POS Coupon 
 
 ```
 func GetPosCoupon() *proto.PosCoupon {
 	return &proto.PosCoupon{
 		BusinessId:     60100,
-		PosId:          1,
 		CouponId:       10,
 		BranchId:       1,
 		Location:       "Prishtine",
 		OperatorId:     "Kushtrimi",
+		PosId:          1,
 		ApplicationId:  1234,
 		ReferenceNo:    0,
 		VerificationNo: "1234567890123456",
@@ -172,12 +179,12 @@ func GetPosCoupon() *proto.PosCoupon {
 		Total: 1820,
 		TaxGroups: []*proto.TaxGroup{
 			{TaxRate: "C", TotalForTax: 450, TotalTax: 0},
-			{TaxRate: "D", TotalForTax: 320, TotalTax: 26},
-			{TaxRate: "E", TotalForTax: 1050, TotalTax: 189},
+			{TaxRate: "D", TotalForTax: 296, TotalTax: 24},
+			{TaxRate: "E", TotalForTax: 889, TotalTax: 161},
 		},
-		TotalTax:     215,
-		TotalNoTax:  1605,
-		TotalDiscount: 75,
+		TotalTax: 185,
+		TotalNoTax: 1635,
+		TotalDiscount: 0,	
 	}
 }
 
