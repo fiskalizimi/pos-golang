@@ -1,0 +1,91 @@
+syntax = "proto3";
+package atk;
+
+
+option go_package = "./proto";
+
+enum CouponType {
+  UnknownType = 0;
+  Sale = 1;
+  Cancel = 2;
+  Return = 3;
+}
+
+enum PaymentType {
+  UnknownPayment = 0;
+  Cash = 1;
+  CreditCard = 2;
+  Voucher = 3;
+  Cheque = 4;
+  CryptoCurrency = 5;
+  Other = 6;
+}
+
+message CouponItem {
+  string Name = 1;
+  int64 Price = 2;
+  string Unit = 3;
+  float Quantity = 4;
+  int64 Total = 5;
+  string TaxRate = 6;
+  string Type = 7;
+}
+
+message Payment {
+  PaymentType Type = 1;
+  int64 Amount = 2;
+}
+
+message TaxGroup {
+  string TaxRate = 1;
+  int64 TotalForTax = 2;
+  int64 TotalTax = 3;
+}
+
+message PosCoupon {
+  uint64 BusinessId = 1;
+  uint64 CouponId = 2;
+  uint64 BranchId = 3;
+  string Location = 4;
+  string OperatorId = 5;
+  uint64 PosId = 6;
+  uint64 ApplicationId = 7;
+  string VerificationNo = 8;
+  CouponType Type = 9;
+  int64 Time = 10;
+  repeated CouponItem Items = 11;
+  repeated Payment Payments = 12;
+  int64 Total = 13;
+  repeated TaxGroup TaxGroups = 14;
+  int64 TotalTax = 15;
+  int64 TotalNoTax = 16;
+  uint64 ReferenceNo = 17;
+  uint64 TransactionNo = 18;
+  int64 TotalDiscount = 19;
+}
+
+message CitizenCoupon {
+  uint64 BusinessId = 1;
+  uint64 CouponId = 2;
+  uint64 BranchId = 3;
+  uint64 PosId = 4;
+  uint64 VerificationNo = 5;
+  CouponType Type = 6;
+  int64 Time = 7;
+  int64 Total = 8;
+  repeated TaxGroup TaxGroups = 9;
+  int64 TotalTax = 10;
+  int64 TotalNoTax = 11;
+}
+
+message QrCoupon {
+  uint64 BusinessId = 1;
+  uint64 CouponId = 2;
+  uint64 BranchId = 3;
+  uint64 PosId = 4;
+  CouponType Type = 5;
+  int64 Time = 6;
+  int64 Total = 7;
+  repeated TaxGroup TaxGroups = 8;
+  int64 TotalTax = 9;
+}
