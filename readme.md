@@ -101,12 +101,13 @@ The ```CitizenCoupon``` represents a simplified receipt that will be the part of
 ```
 func GetCitizenCoupon() *proto.CitizenCoupon {
 	return &proto.CitizenCoupon{
-		BusinessId: 1,
-		PosId:      1,
-		CouponId:   1234,
-		Type:       proto.CouponType_Sale,
-		Time:       time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
-		Total:      182000,  
+        BusinessId = 1,
+        PosId =      1,
+        BranchId =   1,
+        CouponId =   1234,
+		Type:        proto.CouponType_Sale,
+		Time:        time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
+		Total:       182000,  
 		TaxGroups: []*proto.TaxGroup{
 			{TaxRate: "C", TotalForTax: 45000, TotalTax: 0},
 			{TaxRate: "D", TotalForTax: 32000, TotalTax: 2600},
