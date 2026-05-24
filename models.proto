@@ -84,3 +84,85 @@ message QrCoupon {
   int64 TotalTax = 8;
 }
 
+// events ---------------------------------------
+
+message BusinessOnboarded {
+  string BusinessName = 1;
+  uint64 BusinessID = 2;
+  uint64 BranchID = 3;
+  uint64 PosID = 4;
+  uint64 VerificationNo = 5;
+  string Certificate = 6;
+  int64 Timestamp = 7;
+}
+
+message CertificateDisabled {
+  uint64 BusinessID = 1;
+  uint64 PosID = 2;
+  string Message = 3;
+  int64 DisabledAt = 4;
+  int64 Timestamp = 5;
+}
+
+message CertificateEnabled {
+  uint64 BusinessID = 1;
+  uint64 PosID = 2;
+  string Message = 3;
+  int64 DisabledAt = 4;
+  int64 Timestamp = 5;
+}
+
+
+message CitizenFiscalCouponReceived  {
+  uint64 CitizenID = 1;
+  uint64 BusinessID = 2;
+  uint64 CouponID = 3;
+  uint64 PosID = 4;
+  CouponType Type = 5;
+  int64 Time = 6;
+  repeated TaxGroup TaxGroups = 7;
+  int64 TotalTax = 8;
+  int64 Total = 9;
+  int64 Timestamp = 10;
+}
+
+message CitizenRegistered {
+  uint64 CitizenID = 1;
+  string Name = 2;
+  string Surname = 3;
+  string Email = 4;
+  string Mobile = 5;
+  int64 Timestamp = 6;
+}
+
+message CouponValidated {
+  uint64 BusinessID = 1;
+  uint64 CouponID = 2;
+  uint64 PosID = 3;
+  uint64 CitizenID = 4;
+  string Status = 5;
+  int64 ValidatedAt = 6;
+  int64 Timestamp = 7;
+}
+
+message PosFiscalCouponReceived {
+  uint64 BusinessID = 1;
+  uint64 CouponID = 2;
+  uint64 BranchID = 3;
+  string Location = 4;
+  string OperatorID = 5;
+  uint64 ApplicationID = 6;
+  uint64 PosID = 7;
+  string VerificationNo = 8;
+  CouponType Type = 9;
+  uint64 ReferenceNo = 10;
+  int64 Time = 11;
+  repeated CouponItem Items = 12;
+  repeated Payment Payments = 13;
+  int64 Total = 14;
+  repeated TaxGroup TaxGroups = 15;
+  int64 TotalTax = 16;
+  int64 TotalNoTax = 17;
+  uint64 TransactionNo = 18;
+  int64 Timestamp = 19;
+}
