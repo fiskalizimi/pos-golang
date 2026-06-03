@@ -377,7 +377,7 @@ tAiM
 -----END CERTIFICATE REQUEST-----
 ```
 
-A sample code of how to generate a CSR is on [Pki.cs](fiskalizimi/Pki.cs) and [Program.cs](fiskalizimi/Program.cs) classes.
+A sample code of how to generate a CSR is on [main.go](fiskalizimi/main.go) file.
 
 
 After the CSR is generated and signed with the private key, send a POST request to the ```https://fiskalizimi.atk-ks.org/ca/signcsr``` (for test the url is: ```https://fiskalizimi-test.atk-ks.org/ca/signcsr```) endpoint with the following JSON:
