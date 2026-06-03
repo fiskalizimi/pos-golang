@@ -2,8 +2,13 @@ package main
 
 import (
 	"bytes"
+	"crypto/ecdsa"
+	"crypto/rand"
+	"crypto/x509"
+	"crypto/x509/pkix"
 	"encoding/base64"
 	"encoding/json"
+	"encoding/pem"
 	"errors"
 	"fiskalizimi/proto"
 	"fmt"
@@ -172,6 +177,34 @@ func SendPosCoupon() error {
 		return errors.New(fmt.Sprintf("response status code %d", resp.StatusCode))
 	}
 	return nil
+}
+
+// CreateCSR creates a CSR signed with the private key
+func CreateCSR(privateKey *ecdsa.PrivateKey, company, nui, branchID, posID string) ([]byte, error) {
+	subject := pkix.Name{
+		Country:            []string{"RKS"},
+		Organization:       []string{nui},
+		OrganizationalUnit: []string{posID},
+		Locality:           []string{branchID},
+		CommonName:         company,
+	}
+
+	csrTemplate := x509.CertificateRequest{
+		Subject:            subject,
+		SignatureAlgorithm: x509.ECDSAWithSHA256,
+	}
+
+	csrBytes, err := x509.CreateCertificateRequest(rand.Reader, &csrTemplate, privateKey)
+	if err != nil {
+		return nil, err
+	}
+
+	pemBlock := &pem.Block{
+		Type:  "CERTIFICATE REQUEST",
+		Bytes: csrBytes,
+	}
+
+	return pem.EncodeToMemory(pemBlock), nil
 }
 
 func main() {
