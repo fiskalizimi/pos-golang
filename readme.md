@@ -178,10 +178,10 @@ func GetPosCoupon() *proto.PosCoupon {
 		Type:           proto.CouponType_Sale,
 		Time:           time.Date(2024, time.September, 24, 6, 11, 29, 0, time.Local).Unix(),
 		Items: []*proto.CouponItem{
-			{Name: "uje rugove", Price: 15000, Unit: "cope", Quantity: 3, Total: 450, TaxRate: "C", Type: "TT"},
-			{Name: "sendviq", Price: 30000, Unit: "cope", Quantity: 2, Total: 600, TaxRate: "E", Type: "TT"},
-			{Name: "buke", Price: 8000, Unit: "cope", Quantity: 4, Total: 320, TaxRate: "D", Type: "TT"},
-			{Name: "machiato e madhe", Unit: "cope", Price: 15000, Quantity: 3, Total: 450, TaxRate: "E", Type: "TT"},
+			{Name: "uje rugove", Price: 15000, Unit: "cope", Quantity: 3, Total: 45000, TaxRate: "C", Type: "TT"},
+			{Name: "sendviq", Price: 30000, Unit: "cope", Quantity: 2, Total: 60000, TaxRate: "E", Type: "TT"},
+			{Name: "buke", Price: 8000, Unit: "cope", Quantity: 4, Total: 32000, TaxRate: "D", Type: "TT"},
+			{Name: "machiato e madhe", Unit: "cope", Price: 15000, Quantity: 3, Total: 45000, TaxRate: "E", Type: "TT"},
 		},
 		Payments: []*proto.Payment{
 			{Type: proto.PaymentType_Cash, Amount: 500},
